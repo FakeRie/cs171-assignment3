@@ -56,10 +56,10 @@ public:
 	{
 		Interaction finalInteraction;
 		if (isUniformExisting) {
-		/*
-		 * TODO: Use uniform grid to handle triangle intersection here
-		 * Note: Grid traversal algorithm must be used here.
-		 */
+			/*
+			 * TODO: Use uniform grid to handle triangle intersection here
+			 * Note: Grid traversal algorithm must be used here.
+			 */
 		} else {
 			for (int i = 0; i < triangleCount; i++) {
 				Interaction curInteraction;

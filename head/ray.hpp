@@ -10,7 +10,7 @@ public:
     // para 'dir'   :   direction of the ray , it's the programmer's responsibility to normalize it
     // para 'fmin'  :   the minimum range of the ray . It could be set a very small value to avoid false self intersection
     // para 'fmax'  :   the maximum range of the ray . A ray with 'fmax' not equal to 0 is actually a line segment, usually used for shadow ray.
-    Ray(const Eigen::Vector3f& ori, const Eigen::Vector3f& dir, float fmin = 1e-5f, float fmax = FLT_MAX) {
+    Ray(const Eigen::Vector3f& ori, const Eigen::Vector3f& dir, float fmin = 1e-5f, float fmax = 1e+30f) {
         m_Ori = ori;
         m_Dir = dir.normalized();
         m_fMin = fmin;

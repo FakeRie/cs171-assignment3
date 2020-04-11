@@ -12,7 +12,7 @@
 #include "triangleMesh.hpp"
 
 inline float clamp(float x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
-inline unsigned char toInt(float x) { return unsigned char(pow(clamp(x), 1 / 2.2) * 255 + .5); }
+inline unsigned char toInt(float x) { return (unsigned char)(pow(clamp(x), 1 / 2.2) * 255 + .5); }
 
 int main()
 {

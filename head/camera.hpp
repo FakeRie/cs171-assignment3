@@ -14,23 +14,18 @@ public:
     Camera(const Eigen::Vector3f& pos, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, float verticalFov, const Eigen::Vector2i& filmRes) : m_Film(filmRes)
 	{
         m_Pos = pos;
-        m_Forward = (lookAt - pos).normalized();
-        m_Right = m_Forward.cross(up);
-        m_Up = m_Right.cross(m_Forward);
-
-        float vlen = tanf(0.5f * verticalFov * M_PIf / 180.0f);
-        m_Up *= vlen;
-        float ulen = vlen * m_Film.getAspectRatio();
-        m_Right *= ulen;
+        /*
+		 * TODO: Creat axes for camera here, which concerns m_Forward, m_Right and m_Up variables
+		 */
     }
 
 	// Generate camera ray
+	// dx and dy is the pixel's coordinate
 	Ray generateRay(int dx, int dy)
 	{
-        Eigen::Array2f t(dx, dy);
-        Eigen::Array2f r(m_Film.m_Res.x(), m_Film.m_Res.y());
-        t = t / r * 2 - 1;
-        return {m_Pos, t.x() * m_Right + t.y() * m_Up + m_Forward};
+        /*
+		 * TODO: Shoot camera ray here, 
+		 */
     }
 
     void setPixel(int dx, int dy, Eigen::Vector3f value)
