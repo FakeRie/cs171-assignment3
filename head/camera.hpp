@@ -24,7 +24,7 @@ public:
 	Ray generateRay(int dx, int dy)
 	{
         /*
-		 * TODO: Shoot camera ray here, 
+		 * TODO: Shoot camera ray here
 		 */
     }
 
